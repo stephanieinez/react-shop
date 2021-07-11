@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# Monkii Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is simple shop page, rendering products from a json file and allowing the user to sort, filter and add the items to their cart. This project is built with [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) and uses [Styled Components](https://styled-components.com/).
+
+## How to use
+
+Using the dropdown select inputs, you can _sort the products by price_ and also _filter the products by size_.
+
+You can add products to the cart by selecting the product's `Add to cart` button.
+
+You can view what's inside your cart by clicking on the shopping cart icon in the header. You can close your cart and go back to the shop page by clicking the `Continue shopping` button.
+
+## Testing
+
+This application is tested using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
+
+## Accessibility
+
+I chose to use a foundation dialog modal by [ReachUI](https://reach.tech/dialog/) to display the shop items, as it provides completely accessible React components to build upon.
+
+## Improvements
+
+- Ability to remove items from the cart: I would have added a button to be able to remove items from the shopping cart. I would have added this functionality to the provider.
+- Ability to select a size to add to the cart: I would have created a select input for a user to be able to select a size. I would have then saved this data and added it to the product object which is pushed onto the cart items array.
+- Create a json server to fetch the data: I would have served the data via an API using a library such as [`json-server`](https://www.npmjs.com/package/json-server). I would have had to adjust my testing strategy as the data would be coming from the API. One possible solution would be to use [MSW](https://mswjs.io/) to mock the endpoint so that I could generate test data for the responses.
+- Product pages: I would have used [React Router](https://reactrouter.com/) to set up navigation between pages.
 
 ## Available Scripts
 
@@ -18,53 +41,3 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
